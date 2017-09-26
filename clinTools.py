@@ -187,7 +187,6 @@ def parsePileupLine(pileupLine):
 
     # handle insertion
     for ins in insMatch:
-        depth += 1
         insLen = int(re.findall('\+([0-9]+)', ins)[0])
         insSeq = re.findall('\+' + str(insLen) + '([ATCGNatcgn]{' + str(insLen) + '})', ins)[0]
         # clean readbase
